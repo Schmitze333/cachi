@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Cachi
   module LimitedFifo
     DEFAULT_CACHE_SIZE = 1000

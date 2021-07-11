@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'cachi/limited_fifo'
 
 RSpec.describe Cachi::LimitedFifo do
@@ -5,8 +7,6 @@ RSpec.describe Cachi::LimitedFifo do
 
   let(:fill_spy) { spy('fill_spy') }
   let(:cache_class) do
-    subject(:cache) { cache_class.new(fill_spy) }
-
     Class.new do
       include Cachi::LimitedFifo
       cache_size 2
